@@ -4,10 +4,10 @@ var bodyParser = require("body-parser");
 var app = express()
 var http = require("http").Server(app)
 var io= require("socket.io")(http)
-//var conString = "mongodb://srakshadev_v:Srakshadev@ds145369.mlab.com:45369/chat_dev"
-var conString ="mongodb://srakshadev_v:Srakshadev@ds147659.mlab.com:47659/srakshadb_dev";
+var conString = "mongodb://srakshadev_v:Srakshadev@ds145369.mlab.com:45369/chat_dev"
+//var conString ="mongodb://srakshadev_v:Srakshadev@ds147659.mlab.com:47659/srakshadb_dev";
 app.use(express.static(__dirname + '/public'));
-//mongoose.Promise = global.Promise; 
+mongoose.Promise = global.Promise; 
 /*mongoose.connect(conString, function(err){
     if (err){
         console.log(err);
