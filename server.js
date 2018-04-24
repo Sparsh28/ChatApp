@@ -7,7 +7,14 @@ var io= require("socket.io")(http)
 var conString = "mongodb://srakshadev_v:Srakshadev@ds147659.mlab.com:47659/chat_dev"
 app.use(express.static(__dirname + '/public'));
 //mongoose.Promise = global.Promise; 
-mongoose.connect(conString);
+mongoose.connect(conString, function(err){
+    if (err){
+        console.log("Error connecting database ...");
+    } else {
+        console.log("Connected to the database successfully ...");
+    }
+});
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
