@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 io.on("connection", function(socket){
     console.log("Socket is connected...")
-})
+});
 
 var Chats = mongoose.model("Chats", {
     name: String,
