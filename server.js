@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var app = express()
 var http = require("http").Server(app)
 var io= require("socket.io")(http)
-var conString = "mongodb://localhost:27017/mongoTest"
+var conString = "mongodb://srakshadev_v:Srakshadev@ds147659.mlab.com:47659/chat_dev"
 app.use(express.static(__dirname + '/public'));
 //mongoose.Promise = global.Promise; 
 mongoose.connect(conString);
