@@ -10,6 +10,7 @@ app.use(express.static(__dirname + '/public'));
 //mongoose.Promise = global.Promise; 
 mongoose.connect(conString, function(err){
     if (err){
+        console.log(err);
         console.log("Error connecting database ...");
     } else {
         console.log("Connected to the database successfully ...");
